@@ -40,11 +40,12 @@ void Run1()
     forwardAlign(80,3);
     backwardTime(80,250,1,0);
     rotate(-90);
+    backwardAlign(80,2);
 
     forwardTill(100,1);
     backwardTime(80,250,0,0);
     rotate(90);
-    backwardAlign(80,3);
+    backwardAlign(80,);
 
     forwardTill(100,1);
     backwardTime(80,250,0,0);
