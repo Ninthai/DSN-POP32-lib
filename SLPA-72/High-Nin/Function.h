@@ -21,6 +21,9 @@ LEDSensorLine<2> Back({
     &sensors[5],
     &sensors[6],
 });
+// Kp Ki Kd
+PIDGains newRotateGenius = {3.2 , 2.5 , 1.4 , 1.2 , 0};
+
 
 int32_t servoPIN = 1;
 int32_t startAngle = 175;
