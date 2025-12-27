@@ -23,7 +23,7 @@ LEDSensorLine<2> Back({
 });
 
 int32_t servoPIN = 1;
-int32_t startAngle = 180;
+int32_t startAngle = 175;
 int32_t endAngle = 30;
 
 void forwardTill(int32_t base_speed, bool _tillBlack = true, bool _reset = true,bool _continuous = false){
@@ -128,8 +128,8 @@ void backwardAlign(int16_t speed,int16_t repeat = 1,int32_t back_delay = 150){
             if(!Back.cOnline)motors.run(-speed,-speed);
 
             // Black at right -> go right
-            else if(Back.errorFromMid() > 0)motors.run(-speed,speed);
-            else motors.run(speed,-speed);
+            else if(Back.errorFromMid() > 0)motors.run(speed,-speed);
+            else motors.run(-speed,speed);
         }while(abs(Back.errorFromMid()) >= 50 || !Back.cOnline);
         if(idx == repeat)break;
         motors.run(speed,speed);
